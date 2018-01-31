@@ -1,0 +1,88 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hazard_unit is
+port(	opcodeF, opcodeD, opcodeE, opcodeM, opcodeW, functF, functD, functE, functM, functW: in std_logic_vector(5 downto 0);
+		rsD, rtD, rsE, rtE, writeregE, writeregM, writeregW: in std_logic_vector(4 downto 0);
+		branch, zero: in std_logic;
+		stallF, stallD, stallE, fwCE: out std_logic;
+		fwAD, fwBD, fwCD, fwAE, fwBE: out std_logic_vector(1 downto 0));
+end entity;
+
+architecture dataflow of hazard_unit is 
+signal addi	: std_logic_vector(5 downto 0) := "001000";
+signal andi	: std_logic_vector(5 downto 0) := "001100";
+signal ori	: std_logic_vector(5 downto 0) := "001101";
+signal beq	: std_logic_vector(5 downto 0) := "000100";
+signal bne	: std_logic_vector(5 downto 0) := "000101";
+signal slti	: std_logic_vector(5 downto 0) := "001010";
+signal lw	: std_logic_vector(5 downto 0) := "100011";
+signal lui	: std_logic_vector(5 downto 0) := "001111";
+signal lb	: std_logic_vector(5 downto 0) := "100000";
+signal sw	: std_logic_vector(5 downto 0) := "101011";
+signal sb	: std_logic_vector(5 downto 0) := "100100";
+signal j	: std_logic_vector(5 downto 0) := "000010";
+signal jal	: std_logic_vector(5 downto 0) := "000011";
+-------------------------------------------------------------
+begin
+stallF <=	'1' when (opcodeD = lw or opcodeD = lui or opcodeD = lb) and (opcodeF =beq or opcodeF = bne) else
+--			'1' when opcodeD = beq or opcodeD = bne or (opcodeD = "000000" and functD = "001000") else
+--			-- branch and jump reg
+			'0';
+stallD <= 	'1' when (opcodeD = lw or opcodeD = lui or opcodeD = lb) and (opcodeF =beq or opcodeF = bne) else
+			-- load then branch
+			'1' when (opcodeD = beq or opcodeD = bne or (opcodeD = "000000" and functD = "001000")) and not( branch='1' and zero='0') else
+			-- branch and jump reg
+			'1' when (opcodeE = lw or opcodeE = lui or opcodeE = lb) and 
+					 --(opcodeD /= beq or opcodeD /= bne or opcodeD /= j or opcodeD /= jal) and -- pass vi da xet bne, beq, j ,jal 
+					 ((opcodeD = "000000" and (writeregE = rsD or writeregE = rtD)) 
+					 or (opcodeD /= "000000" and opcodeD /= sb and opcodeD /= sw and writeregE = rsD) 
+					 or ((opcodeD = sb or opcodeD = sw) and writeregE = rtD)
+					 or ((opcodeD = lb or opcodeD = lw) and writeregE = rsD)) else		
+			 --LOAD
+			'0';
+stallE <= 	'1' when opcodeD = beq or opcodeD = bne or (opcodeD = "000000" and functD = "001000") else
+			-- branch and jump reg
+			'1' when (opcodeE = lw or opcodeE = lui or opcodeE = lb) and 
+					 --(opcodeD /= beq or opcodeD /= bne or opcodeD /= j or opcodeD /= jal) and -- pass vi da xet bne, beq, j ,jal 
+					 ((opcodeD = "000000" and (writeregE = rsD or writeregE = rtD)) 
+					 or (opcodeD /= "000000" and opcodeD /= sb and opcodeD /= sw and writeregE = rsD) 
+					 or ((opcodeD = sb or opcodeD = sw) and writeregE = rtD)
+					 or ((opcodeD = lb or opcodeD = lw) and writeregE = rsD)) else		
+			 --LOAD
+			'0';
+fwAD <=		"01" when ((opcodeM = "000000" and functM /= "001000") or opcodeM = addi or opcodeM = andi or opcodeM = ori 
+					 or opcodeM = slti) and (opcodeD = beq or opcodeD = bne) and rsD = writeregM else
+			"10" when ((opcodeE = "000000" and functE /= "001000") or opcodeE = addi or opcodeE = andi or opcodeE = ori 
+					 or opcodeE = slti) and (opcodeD = beq or opcodeD = bne) and rsD = writeregE else
+			"00";
+fwBD <=		"01" when ((opcodeM = "000000" and functM /= "001000") or opcodeM = addi or opcodeM = andi or opcodeM = ori 
+					 or opcodeM = slti) and (opcodeD = beq or opcodeD = bne) and rtD = writeregM else
+			"10" when ((opcodeE = "000000" and functE /= "001000") or opcodeE = addi or opcodeE = andi or opcodeE = ori 
+					 or opcodeE = slti) and (opcodeD = beq or opcodeD = bne) and rtD = writeregE else
+			"00";
+fwCD <=		"01" when ((opcodeM = "000000" and functM /= "001000") or opcodeM = addi or opcodeM = andi or opcodeM = ori 
+					 or opcodeM = slti) and (opcodeD = "000000" and functD = "001000") and rsD = writeregM else
+			"10" when ((opcodeE = "000000" and functE /= "001000") or opcodeE = addi or opcodeE = andi or opcodeE = ori 
+					 or opcodeE = slti) and (opcodeD = "000000" and functD = "001000") and rsD = writeregE else
+			"00";
+fwAE <= 	"01" when opcodeM /= lw and opcodeM /= lb and opcodeM /= lui and opcodeM /= beq and opcodeM /= bne and opcodeM /= sw
+					  and opcodeM /= sb and opcodeM /= j and opcodeM /= jal and not(opcodeM = "000000" and functM = "001000") 
+					  and writeregM = rsE else
+			"10" when opcodeW /= beq and opcodeW /= bne and opcodeW /= sw
+					  and opcodeW /= sb and opcodeW /= j and opcodeW /= jal and not(opcodeW = "000000" and functW = "001000") 
+					  and writeregW = rsE else		
+			"00";
+fwBE <= 	"01" when opcodeM /= lw and opcodeM /= lb and opcodeM /= lui and opcodeM /= beq and opcodeM /= bne and opcodeM /= sw
+					  and opcodeM /= sb and opcodeM /= j and opcodeM /= jal and not(opcodeM = "000000" and functM = "001000") 
+					  and writeregM = rtE else
+			"10" when opcodeW /= beq and opcodeW /= bne and opcodeW /= sw
+					  and opcodeW /= sb and opcodeW /= j and opcodeW /= jal and not(opcodeW = "000000" and functW = "001000") 
+					  and writeregW = rtE else		
+			"00";	
+fwCE <=		'1' when ((opcodeM = "000000" and functM /= "001000") or opcodeM = addi or opcodeM = andi or opcodeM = ori 
+					 or opcodeM = slti) and (opcodeE = sw or opcodeE = sb)  and writeregM = rtE else
+			'0';
+end architecture;
+						  	
+
