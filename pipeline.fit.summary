@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Dec 04 12:57:15 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Revision Name : pipeline
+Top-level Entity Name : mips_pipeline
+Family : Cyclone II
+Device : EP2C35F672C7
+Timing Models : Final
+Total logic elements : 0 / 33,216 ( 0 % )
+    Total combinational functions : 0 / 33,216 ( 0 % )
+    Dedicated logic registers : 0 / 33,216 ( 0 % )
+Total registers : 0
+Total pins : 1 / 475 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 0 / 483,840 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
