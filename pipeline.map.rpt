@@ -1,0 +1,532 @@
+Analysis & Synthesis report for pipeline
+Mon Dec 04 12:57:09 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Parameter Settings for User Entity Instance: mux2_1:MUX1
+  9. Parameter Settings for User Entity Instance: mux4_1:MUX2
+ 10. Parameter Settings for User Entity Instance: mux2_1:MUX3
+ 11. Parameter Settings for User Entity Instance: mux2_1:MUX4
+ 12. Parameter Settings for User Entity Instance: mux4_1:MUX5
+ 13. Parameter Settings for User Entity Instance: mux4_1:MUX6
+ 14. Parameter Settings for User Entity Instance: mux4_1:MUX7
+ 15. Parameter Settings for User Entity Instance: mux2_1:MUX8
+ 16. Parameter Settings for User Entity Instance: mux4_1:MUX9
+ 17. Parameter Settings for User Entity Instance: mux2_1:MUX10
+ 18. Parameter Settings for User Entity Instance: mux4_1:MUX11
+ 19. Parameter Settings for User Entity Instance: mux2_1:MUX12
+ 20. Parameter Settings for User Entity Instance: mux2_1:MUX_DATA
+ 21. Parameter Settings for User Entity Instance: mux4_1:MUX13
+ 22. Port Connectivity Checks: "mux2_1:MUX3"
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 04 12:57:09 2017   ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name                      ; pipeline                                ;
+; Top-level Entity Name              ; mips_pipeline                           ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 0                                       ;
+;     Total combinational functions  ; 0                                       ;
+;     Dedicated logic registers      ; 0                                       ;
+; Total registers                    ; 0                                       ;
+; Total pins                         ; 1                                       ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 0                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP2C35F672C7       ;                    ;
+; Top-level entity name                                          ; mips_pipeline      ; pipeline           ;
+; Family name                                                    ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
+; add.vhd                          ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/add.vhd                ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/alu.vhd                ;
+; alu_control.vhd                  ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/alu_control.vhd        ;
+; compare.vhd                      ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/compare.vhd            ;
+; control_unit.vhd                 ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/control_unit.vhd       ;
+; data_memory.vhd                  ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/data_memory.vhd        ;
+; hazard_unit.vhd                  ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/hazard_unit.vhd        ;
+; instruction_memory.vhd           ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/instruction_memory.vhd ;
+; mips_pipeline.vhd                ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/mips_pipeline.vhd      ;
+; mux2_1.vhd                       ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/mux2_1.vhd             ;
+; mux4_1.vhd                       ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/mux4_1.vhd             ;
+; pc.vhd                           ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/pc.vhd                 ;
+; plus4.vhd                        ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/plus4.vhd              ;
+; plus8.vhd                        ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/plus8.vhd              ;
+; regD.vhd                         ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/regD.vhd               ;
+; regE.vhd                         ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/regE.vhd               ;
+; regM.vhd                         ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/regM.vhd               ;
+; regW.vhd                         ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/regW.vhd               ;
+; register_file.vhd                ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/register_file.vhd      ;
+; shft_left.vhd                    ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/shft_left.vhd          ;
+; shft_left_s.vhd                  ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/shft_left_s.vhd        ;
+; sign_zero_extend.vhd             ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/sign_zero_extend.vhd   ;
+; zero_extend.vhd                  ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/zero_extend.vhd        ;
+; mux2_1_logic.vhd                 ; yes             ; User VHDL File  ; C:/altera/90/quartus/pipeline/mux2_1_logic.vhd       ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |mips_pipeline             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |mips_pipeline      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 5     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX5 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX6 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX7 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX8 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 5     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX9 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX10 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX11 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX12 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:MUX_DATA ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4_1:MUX13 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; n              ; 32    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "mux2_1:MUX3" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; d1   ; Input ; Info     ; Stuck at VCC  ;
++------+-------+----------+---------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Mon Dec 04 12:57:06 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
+Info: Found 2 design units, including 1 entities, in source file add.vhd
+    Info: Found design unit 1: add-dataflow
+    Info: Found entity 1: add
+Info: Found 2 design units, including 1 entities, in source file alu.vhd
+    Info: Found design unit 1: alu-structure
+    Info: Found entity 1: alu
+Info: Found 2 design units, including 1 entities, in source file alu_control.vhd
+    Info: Found design unit 1: alu_control-behavior
+    Info: Found entity 1: alu_control
+Info: Found 2 design units, including 1 entities, in source file compare.vhd
+    Info: Found design unit 1: compare-dataflow
+    Info: Found entity 1: compare
+Info: Found 2 design units, including 1 entities, in source file control_unit.vhd
+    Info: Found design unit 1: control_unit-behavior
+    Info: Found entity 1: control_unit
+Info: Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info: Found design unit 1: data_memory-behavioral
+    Info: Found entity 1: data_memory
+Info: Found 2 design units, including 1 entities, in source file hazard_unit.vhd
+    Info: Found design unit 1: hazard_unit-dataflow
+    Info: Found entity 1: hazard_unit
+Info: Found 2 design units, including 1 entities, in source file instruction_memory.vhd
+    Info: Found design unit 1: instruction_memory-behavioral
+    Info: Found entity 1: instruction_memory
+Info: Found 2 design units, including 1 entities, in source file mips_pipeline.vhd
+    Info: Found design unit 1: mips_pipeline-hungdeptrai
+    Info: Found entity 1: mips_pipeline
+Info: Found 2 design units, including 1 entities, in source file mux2_1.vhd
+    Info: Found design unit 1: mux2_1-beh
+    Info: Found entity 1: mux2_1
+Info: Found 2 design units, including 1 entities, in source file mux4_1.vhd
+    Info: Found design unit 1: mux4_1-beh
+    Info: Found entity 1: mux4_1
+Info: Found 2 design units, including 1 entities, in source file pc.vhd
+    Info: Found design unit 1: PC-behavior
+    Info: Found entity 1: PC
+Info: Found 2 design units, including 1 entities, in source file plus4.vhd
+    Info: Found design unit 1: plus4-behavior
+    Info: Found entity 1: plus4
+Info: Found 2 design units, including 1 entities, in source file plus8.vhd
+    Info: Found design unit 1: plus8-behavior
+    Info: Found entity 1: plus8
+Info: Found 2 design units, including 1 entities, in source file regD.vhd
+    Info: Found design unit 1: regD-behavior
+    Info: Found entity 1: regD
+Info: Found 2 design units, including 1 entities, in source file regE.vhd
+    Info: Found design unit 1: regE-behavior
+    Info: Found entity 1: regE
+Info: Found 2 design units, including 1 entities, in source file regM.vhd
+    Info: Found design unit 1: regM-behavior
+    Info: Found entity 1: regM
+Info: Found 2 design units, including 1 entities, in source file regW.vhd
+    Info: Found design unit 1: regW-behavior
+    Info: Found entity 1: regW
+Info: Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info: Found design unit 1: register_file-behavior
+    Info: Found entity 1: register_file
+Info: Found 2 design units, including 1 entities, in source file shft_left.vhd
+    Info: Found design unit 1: shft_left-structure
+    Info: Found entity 1: shft_left
+Info: Found 2 design units, including 1 entities, in source file shft_left_s.vhd
+    Info: Found design unit 1: shft_left_s-structure
+    Info: Found entity 1: shft_left_s
+Info: Found 2 design units, including 1 entities, in source file sign_zero_extend.vhd
+    Info: Found design unit 1: sign_zero_extend-behavior
+    Info: Found entity 1: sign_zero_extend
+Info: Found 2 design units, including 1 entities, in source file zero_extend.vhd
+    Info: Found design unit 1: zero_extend-behavior
+    Info: Found entity 1: zero_extend
+Info: Found 2 design units, including 1 entities, in source file mux2_1_logic.vhd
+    Info: Found design unit 1: mux2_1_logic-dataflow
+    Info: Found entity 1: mux2_1_logic
+Info: Elaborating entity "mips_pipeline" for the top level hierarchy
+Info: Elaborating entity "PC" for hierarchy "PC:PC1"
+Info: Elaborating entity "instruction_memory" for hierarchy "instruction_memory:IM"
+Info: Elaborating entity "mux2_1" for hierarchy "mux2_1:MUX1"
+Info: Elaborating entity "plus4" for hierarchy "plus4:PCP41"
+Info: Elaborating entity "plus8" for hierarchy "plus8:PCP81"
+Info: Elaborating entity "shft_left_s" for hierarchy "shft_left_s:SHIFTLEFT2S"
+Info: Elaborating entity "mux4_1" for hierarchy "mux4_1:MUX2"
+Info: Elaborating entity "hazard_unit" for hierarchy "hazard_unit:HAZARDINTENSIVE"
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(13): used explicit default value for signal "addi" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(14): used explicit default value for signal "andi" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(15): used explicit default value for signal "ori" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(16): used explicit default value for signal "beq" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(17): used explicit default value for signal "bne" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(18): used explicit default value for signal "slti" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(19): used explicit default value for signal "lw" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(20): used explicit default value for signal "lui" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(21): used explicit default value for signal "lb" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(22): used explicit default value for signal "sw" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(23): used explicit default value for signal "sb" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(24): used explicit default value for signal "j" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at hazard_unit.vhd(25): used explicit default value for signal "jal" because signal was never assigned a value
+Info: Elaborating entity "regD" for hierarchy "regD:REGD1"
+Info: Elaborating entity "control_unit" for hierarchy "control_unit:CUMEANSCONTROLUNIT"
+Info: Elaborating entity "register_file" for hierarchy "register_file:REGISTERFILE"
+Warning (10492): VHDL Process Statement warning at register_file.vhd(51): signal "write_reg_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "mux2_1_logic" for hierarchy "mux2_1_logic:MUXEXTRAFORJAL"
+Info: Elaborating entity "mux2_1" for hierarchy "mux2_1:MUX3"
+Info: Elaborating entity "alu_control" for hierarchy "alu_control:ALUCTRL"
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(9): used explicit default value for signal "add" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(10): used explicit default value for signal "sll_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(11): used explicit default value for signal "srl_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(12): used explicit default value for signal "eq" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(13): used explicit default value for signal "neq" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(14): used explicit default value for signal "and_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(15): used explicit default value for signal "or_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(16): used explicit default value for signal "nor_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(17): used explicit default value for signal "slt" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu_control.vhd(18): used explicit default value for signal "sll_16" because signal was never assigned a value
+Info: Elaborating entity "sign_zero_extend" for hierarchy "sign_zero_extend:SZEXTENSION"
+Info: Elaborating entity "shft_left" for hierarchy "shft_left:SHIFTLEFT2"
+Info: Elaborating entity "add" for hierarchy "add:ADD1"
+Info: Elaborating entity "compare" for hierarchy "compare:COMPARator"
+Warning (10540): VHDL Signal Declaration warning at compare.vhd(13): used explicit default value for signal "eq" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at compare.vhd(14): used explicit default value for signal "neq" because signal was never assigned a value
+Info: Elaborating entity "regE" for hierarchy "regE:REGE1"
+Info: Elaborating entity "zero_extend" for hierarchy "zero_extend:ZEROEXTENSIONNN"
+Info: Elaborating entity "alu" for hierarchy "alu:ALUYO"
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(12): used explicit default value for signal "add" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(13): used explicit default value for signal "sll_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(14): used explicit default value for signal "srl_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(17): used explicit default value for signal "and_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(18): used explicit default value for signal "or_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(19): used explicit default value for signal "nor_op" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(20): used explicit default value for signal "slt" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at alu.vhd(21): used explicit default value for signal "sll_16" because signal was never assigned a value
+Info: Elaborating entity "regM" for hierarchy "regM:REGM1"
+Info: Elaborating entity "data_memory" for hierarchy "data_memory:DATAMEMISHERE"
+Info: Elaborating entity "regW" for hierarchy "regW:REGW1"
+Warning: Ignored assignments for entity "pipeline" -- entity does not exist in design
+    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -entity pipeline -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity pipeline -section_id "Root Region" is ignored
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+Info: Implemented 1 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 0 output pins
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 276 megabytes
+    Info: Processing ended: Mon Dec 04 12:57:09 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

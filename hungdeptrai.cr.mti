@@ -1,0 +1,195 @@
+C:/altera/90/quartus/pipeline/regM.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/regM.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity regm
+-- Compiling architecture behavior of regm
+
+} {} {}} C:/altera/90/quartus/pipeline/pc.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/pc.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity pc
+-- Compiling architecture behavior of pc
+
+} {} {}} C:/altera/90/quartus/pipeline/mips_pipeline.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/mips_pipeline.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity mips_pipeline
+-- Compiling architecture hungdeptrai of mips_pipeline
+
+} {} {}} C:/altera/90/quartus/pipeline/zero_extend.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/zero_extend.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity zero_extend
+-- Compiling architecture behavior of zero_extend
+
+} {} {}} C:/altera/90/quartus/pipeline/sign_zero_extend.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/sign_zero_extend.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity sign_zero_extend
+-- Compiling architecture behavior of sign_zero_extend
+
+} {} {}} C:/altera/90/quartus/pipeline/shft_left.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/shft_left.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity shft_left
+-- Compiling architecture structure of shft_left
+
+} {} {}} C:/altera/90/quartus/pipeline/compare.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/compare.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package numeric_std
+-- Compiling entity compare
+-- Compiling architecture dataflow of compare
+
+} {} {}} C:/altera/90/quartus/pipeline/plus4.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/plus4.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity plus4
+-- Compiling architecture behavior of plus4
+
+} {} {}} C:/altera/90/quartus/pipeline/control_unit.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/control_unit.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity control_unit
+-- Compiling architecture behavior of control_unit
+
+} {} {}} C:/altera/90/quartus/pipeline/regD.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/regD.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity regd
+-- Compiling architecture behavior of regd
+
+} {} {}} C:/altera/90/quartus/pipeline/alu.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/alu.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity alu
+-- Compiling architecture structure of alu
+
+} {} {}} C:/altera/90/quartus/pipeline/data_memory.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/data_memory.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity data_memory
+-- Compiling architecture behavioral of data_memory
+
+} {} {}} C:/altera/90/quartus/pipeline/instruction_memory.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/instruction_memory.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity instruction_memory
+-- Compiling architecture behavioral of instruction_memory
+
+} {} {}} C:/altera/90/quartus/pipeline/regE.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/regE.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity rege
+-- Compiling architecture behavior of rege
+
+} {} {}} C:/altera/90/quartus/pipeline/register_file.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/register_file.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity register_file
+-- Compiling architecture behavior of register_file
+
+} {} {}} C:/altera/90/quartus/pipeline/plus8.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/plus8.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity plus8
+-- Compiling architecture behavior of plus8
+
+} {} {}} C:/altera/90/quartus/pipeline/mux2_1.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/mux2_1.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity mux2_1
+-- Compiling architecture beh of mux2_1
+
+} {} {}} C:/altera/90/quartus/pipeline/regW.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/regW.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity regw
+-- Compiling architecture behavior of regw
+
+} {} {}} C:/altera/90/quartus/pipeline/mux4_1.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/mux4_1.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity mux4_1
+-- Compiling architecture beh of mux4_1
+
+} {} {}} C:/altera/90/quartus/pipeline/shft_left_s.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/shft_left_s.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity shft_left_s
+-- Compiling architecture structure of shft_left_s
+
+} {} {}} C:/altera/90/quartus/pipeline/add.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/add.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity add
+-- Compiling architecture dataflow of add
+
+} {} {}} C:/altera/90/quartus/pipeline/hazard_unit.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/hazard_unit.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity hazard_unit
+-- Compiling architecture dataflow of hazard_unit
+
+} {} {}} C:/altera/90/quartus/pipeline/mux2_1_logic.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/mux2_1_logic.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity mux2_1_logic
+-- Compiling architecture dataflow of mux2_1_logic
+
+} {} {}} C:/altera/90/quartus/pipeline/alu_control.vhd {1 {vcom -work work -2002 -explicit C:/altera/90/quartus/pipeline/alu_control.vhd
+Model Technology ModelSim ALTERA vcom 6.4a Compiler 2008.08 Oct 22 2008
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity alu_control
+-- Compiling architecture behavior of alu_control
+
+} {} {}}
